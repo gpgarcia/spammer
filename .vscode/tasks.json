@@ -1,0 +1,115 @@
+
+
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C# Build+Run",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "run"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "C# Run, no build",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "Exec",
+                "bin\\Debug\\netcoreapp2.0\\ChatServer.dll"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        },
+        {
+            "label": "buildClient",
+            "type": "npm",
+            "script": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
+        {
+            "label": "test-Client",
+            "type": "npm",
+            "script": "test",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "serve-Client",
+            "type": "npm",
+            "script": "start",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
+        {
+            "label": "open",
+            "type": "npm",
+            "script": " start -- -o",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [
+                "$tsc"
+            ]
+        },
+        {
+            "label": "lint-Client",
+            "type": "npm",
+            "script": "lint",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "e2e",
+            "type": "npm",
+            "script": "e2e",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            }
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "path": "ClientApp/",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        }
+    ]
+}

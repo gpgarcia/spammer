@@ -1,0 +1,13 @@
+#chatPanel{
+  min-width:230px;
+  width: auto !important;
+}
+
+#msgHistory {
+  overflow-y: scroll;
+  height: 25vh;
+ }
+
+#msg{
+  width: 65%
+}

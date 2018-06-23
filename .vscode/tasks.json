@@ -110,6 +110,14 @@
             "problemMatcher": [
                 "$eslint-compact"
             ]
+        },
+        {
+            "type": "npm",
+            "script": "start",
+            "path": "ClientApp/",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
         }
     ]
 }

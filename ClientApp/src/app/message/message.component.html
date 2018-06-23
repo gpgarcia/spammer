@@ -3,7 +3,7 @@
 
   <div class="form-group ">
     <div class="input-group d-flex flex-column">
-      <label class="" for="id">Host</label>
+      <label class="" for="id">host</label>
       <select  class="float-right" id="id" #selectElem (click)="host = selectElem.value" >
         <option *ngFor = "let h of hostList" >{{h}}</option>
       </select>

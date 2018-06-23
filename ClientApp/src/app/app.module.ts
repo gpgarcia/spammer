@@ -7,6 +7,8 @@ import { routing} from './app.routes';
 import { MessageComponent } from './message/message.component';
 import { SignInComponent } from './signin/signin.component';
 import { AuthGuard } from './AuthGuard.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { AuthGuard } from './AuthGuard.service';
     routing
     , BrowserModule
     , BsDropdownModule.forRoot()
+    , ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

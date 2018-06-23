@@ -27,7 +27,7 @@ dist/
 tmp/
 out-tsc/
 bin/
-wwwroot/
+wwwroot/**
 *.com
 *.class
 *.dll

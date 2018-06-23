@@ -29,6 +29,7 @@ out-tsc/
 bin/
 
 wwwroot/**
+!wwwroot/ignore.txt
 *.com
 *.class
 *.dll

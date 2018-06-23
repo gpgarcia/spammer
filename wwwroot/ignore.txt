@@ -1,0 +1,1 @@
+need wwwroot folder so build picks project up as web project and builds it.

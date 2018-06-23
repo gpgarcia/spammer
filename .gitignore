@@ -23,10 +23,11 @@ bld/
 [Bb]uild[Ll]og.*
 
 # compiled output
-dist/
+dist/**
 tmp/
 out-tsc/
 bin/
+
 wwwroot/**
 *.com
 *.class

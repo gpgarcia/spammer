@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MessageComponent } from './message/message.component';
-import { SignInComponent } from './signin/signin.component';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -9,4 +9,9 @@ import { SignInComponent } from './signin/signin.component';
 })
 export class AppComponent {
   title = 'Spammer';
+  isCollapsed = true;
+
+  clearUser() {
+    sessionStorage.setItem('currentUser', '');
+  }
 }

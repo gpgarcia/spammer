@@ -18,19 +18,10 @@ export class MessageComponent implements OnInit, AfterViewChecked {
   hostList: string[] = [];
   user: string;
 
-  haveWs = 0;
   isConnected = 0;
 
   constructor() {
-  if (!!window) {
-    if ('WebSocket' in window) {
-         this.status = 'Have WebSockets';
-         this.haveWs = 1;
-    } else {
-        this.status = 'No WebSockets';
-        this.haveWs = 0;
-    }
-  }
+
   const scheme = document.location.protocol === 'https:' ? 'wss' : 'ws';
   const port = document.location.port ? (':' + document.location.port) : '';
   this.hostList = [

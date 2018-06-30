@@ -1,8 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h3>
-    Welcome to {{ title }}!
-  </h3>
+<nav class="navbar navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button"
+  (click)="isCollapsed = !isCollapsed" >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <a class="navbar-brand" href="#">
+    <img src="/assets/icons/spam-96.png" width="30" height="30"
+        class="d-inline-block align-top" alt="spammer icon">
+          Spammer
+  </a>
+</nav>
+
+<div class="sidenav bg-light"
+    [collapse]="isCollapsed"
+    id="sideNavContent" >
+    <div class="nav flex-column">
+      <a class="nav-link" routerLink = "/about" routerLinkActive="active">About </a>
+      <a class="nav-link" routerLink="/" routerLinkActive="active">Sign in</a>
+      <a class="nav-link" (click)="clearUser()" >Sign out</a>
+    </div>
 </div>
 
 <router-outlet></router-outlet>

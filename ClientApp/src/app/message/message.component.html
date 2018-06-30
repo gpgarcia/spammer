@@ -1,6 +1,4 @@
 <div id="chatPanel" class="container">
-  <p id="Status" >{{status}}</p>
-
   <div class="form-group ">
     <div class="input-group d-flex flex-column">
       <label class="" for="id">host</label>
@@ -10,9 +8,9 @@
     </div>
     <div class="" >
       <button type="button" class="btn btn-primary"
-              (click) = "onConnect()" [disabled]="isConnected && haveWs">Connect</button>
+              (click) = "onConnect()" [disabled]="isConnected">Connect</button>
       <button type="button" class="btn btn-primary float-right"
-             (click) = "onDisconnect()" [disabled]="!(isConnected && haveWs)">Disconnect</button>
+             (click) = "onDisconnect()" [disabled]="!(isConnected)">Disconnect</button>
     </div>
   </div>
 

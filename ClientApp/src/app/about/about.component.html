@@ -1,0 +1,15 @@
+<div>
+  <h2>An Exploration of a Chat Application</h2>
+  <button class="btn btn-primary"
+          id="btnAdd"
+          disabled={{btnDisabled}}
+          (click)="onClick()" >
+          Add to Home Screen
+  </button>
+  <h3>Status</h3>
+  <table class="table table-striped">
+    <tr><td>Have WebSockets</td><td>{{haveWebSockets}}</td></tr>
+    <tr><td>Standalone</td><td>{{isStandalone}}</td></tr>
+    <tr><td>Online</td><td>{{isOnline$ | async}}</td></tr>
+  </table>
+</div>

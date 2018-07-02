@@ -11,3 +11,11 @@
 .sidenav.show {
   width : 8em
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: 6px;
+  width: 100%;
+  background-color: #f5f5f5;
+}

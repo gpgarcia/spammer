@@ -1,13 +1,15 @@
 #chatPanel{
   min-width:230px;
   width: auto !important;
+  /*height: calc(100vh - 104px);*/
 }
 
 #msgHistory {
   overflow-y: scroll;
-  height: 25vh;
+  height: calc(75vh - 200px);
+
  }
 
-#msg{
-  width: 65%
+.inputText{
+  width:calc(100% - 62px);
 }
